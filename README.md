@@ -1,5 +1,2 @@
 bernado# MazeMind
-Q-mazing 
-
-Teaches reinforcement learning
-this is a game
+Maze Mind is an interactive web app that teaches reinforcement learning through a hands-on maze-solving simulation, letting users train an AI agent to navigate a maze using rewards and penalties across three distinct learning modes. Users can watch the agent learn in real time via Discovery Mode, tracking success rate, learning curves, and per-run stats, or flip the experience in "Become the AI" mode to feel what trial-and-error learning is actually like from the inside. Built with vanilla JavaScript and HTML5 Canvas, it's a visual, no-dependencies way to understand how AI agents learn optimal strategies through experience.
