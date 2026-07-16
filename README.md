@@ -1,4 +1,4 @@
-# MazeMind
+bernado# MazeMind
 Q-mazing 
 
 Teaches reinforcement learning
