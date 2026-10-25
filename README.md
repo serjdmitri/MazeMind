@@ -1,51 +1,129 @@
-🐭 Maze Mind
+<div align="center">
 
-Teach your own AI!
+<img src="assets/mouse-logo.png" alt="Maze Mind mouse logo" width="150">
 
-Maze Mind is an interactive, single-file web app that teaches reinforcement learning through hands-on maze solving. Build a maze, choose how the agent gets rewarded, then watch a mouse learn — through trial, error, and reward — to find its way to the cheese on its own. No backend, no dependencies: it's plain HTML, CSS, and JavaScript running entirely in the browser.
+# Maze Mind
 
-What it does
+**Teach your own AI.**
 
-Reinforcement learning is how an AI agent learns by trial and error — earning rewards for good moves and penalties for bad ones — until it discovers the best strategy for reaching its goal. Maze Mind makes that process visible and interactive instead of abstract.
+An interactive maze where you build the puzzle, pick the reward, and watch a mouse learn to find the cheese by trial and error.
 
-Modes
+[![Version](https://img.shields.io/badge/version-v2.9.16-f4c430?style=flat-square)](maze-mind-v2_9_16.html)
+[![Platform](https://img.shields.io/badge/platform-browser-dda012?style=flat-square)](#quick-start)
+[![Built with](https://img.shields.io/badge/built%20with-HTML%20%7C%20CSS%20%7C%20JS-3f8f52?style=flat-square)](#tech-stack)
+[![Backend](https://img.shields.io/badge/backend-none-3f8f52?style=flat-square)](#tech-stack)
+[![License: MIT](https://img.shields.io/badge/license-MIT-8c7845?style=flat-square)](LICENSE)
 
-🤖 Train an AI
+[Play the live demo](https://serjdmitri.github.io/MazeMind/maze-mind-v2_9_16.html) · [Quick start](#quick-start) · [Features](#features) · [Contributing](#contributing)
 
-Design a maze (or have one generated for you), pick its size and shape, and train a real Q-learning agent to solve it. Three reward schemes are available:
+<br>
 
+<img src="docs/screenshots/train-ai.png" alt="Maze Mind training a Q-learning agent in the maze builder" width="90%">
 
-Guided – draw the path you want the mouse to learn. It's rewarded for staying on it and penalized for straying, though it never actually sees the path — only the reward signal.
-Discover it yourself – no path at all. The agent pays a flat cost per step and gets a big reward at the exit, so it has to find an efficient route entirely on its own.
-Multiple Paths – more than one correct route exists; the agent is rewarded most for finding the shortest, with progressively smaller rewards for longer (but still valid) paths.
+<sub><i>Build a maze, choose a reward scheme, and train the mouse.</i></sub>
 
+</div>
 
-Switch into Discovery Mode to run episodes one at a time or train in bulk, and watch the agent improve. A results dashboard tracks episodes run, success rate, points earned, a learning curve, and a full run log, plus advanced controls for tuning the learning rate and exploration rate. A Speed slider (Normal → Instant) lets you fast-forward long training runs, adjustable even mid-run. Save and reload multiple trained agents at any time.
+<br>
 
-🧑 Become the AI
+Maze Mind turns reinforcement learning into something you can see. Design a maze, choose how the agent gets rewarded, then watch it learn through trial, error, and reward. Or flip the experience and solve the maze yourself, one bump at a time.
 
-Flip the experience: now you're the agent. The maze is hidden until you step into it — walls only reveal themselves when you bump into them, exactly like the mouse discovers them one collision at a time. Earn and lose points the same way the AI does, restart on a mistake, and once you complete a maze with zero errors, it counts as a clean solve. Save your fastest clean times to a leaderboard and compete with friends.
+It is a single HTML file with no backend and no build step. Everything runs in your browser.
 
-Maze options
+<p align="center">
+  <img src="docs/screenshots/home.png" alt="Maze Mind home screen" width="45%">
+  &nbsp;
+  <img src="docs/screenshots/become-the-ai.png" alt="Become the AI mode" width="45%">
+</p>
 
+<p align="center"><sub>Left: home screen. Right: Become the AI mode, where you are the agent.</sub></p>
 
-Shapes: Square, Double Square, and L-Shape mazes, each with independent size controls
-Build your own maze by hand, or have one auto-generated
-Live charts tracking time-to-finish across runs, per shape, so you can watch the agent (or yourself) get faster over time
+> **Status:** Maze Mind is a single-file web app deployed with GitHub Pages. It has no installer and no accounts. Saved agents and leaderboard times live in your browser's `localStorage`, so they stay on the device you used.
 
+## Features
 
-Tech stack
+### Train an AI
 
+Design a maze, or generate one, and train a Q-learning agent to solve it. Pick from three reward schemes:
 
-Pure HTML, CSS, and vanilla JavaScript — no frameworks, no build step, no external libraries
-Q-learning implemented from scratch in-browser
-Progress (saved agents, leaderboard times) persisted via localStorage
+| Mode | What the agent gets |
+| --- | --- |
+| **Guided** | You draw the path you want. The mouse is rewarded for staying on it and penalized for straying. It never sees the path, only the reward signal. |
+| **Discover it yourself** | No path. A flat cost per step and a large reward at the exit, so the agent has to find an efficient route on its own. |
+| **Multiple Paths** | More than one valid route exists. The shortest route pays the most, and longer valid routes pay progressively less. |
 
+Run episodes one at a time or train in bulk. The results dashboard tracks episodes, success rate, points, a learning curve, and a run log. Advanced controls let you tune the learning rate, exploration rate, and scoring. A speed slider goes from Normal to Instant, and you can change it mid-run. Save and reload trained agents at any time.
 
-Getting started
+### Become the AI
 
-Just open maze-mind-v2_9.html in any modern browser — that's it.
+Flip the experience and play the maze yourself. Walls stay hidden until you bump into them, just like the mouse discovers them. Earn and lose points the same way the AI does. Complete a maze with zero errors to log a clean solve, then save your fastest times to a leaderboard.
 
-Team
+### Maze options
 
-Built by Ally Rogin, Sergey Dmitriev, Lizzy Chu, and Bernardo Dias Martins.
+- **Shapes:** Square, Double Square, and L-Shape, each with independent size controls
+- **Build or generate:** draw your own walls, or auto-generate a maze
+- **Live charts:** time-to-finish across runs, per shape, so you can watch the agent (or yourself) get faster
+
+## Quick start
+
+**Option 1: Use the live demo.** Open the [hosted version](https://serjdmitri.github.io/MazeMind/).
+
+**Option 2: Open it locally.** Clone the repo and open the app file in any modern browser:
+
+```bash
+git clone https://github.com/serjdmitri/MazeMind.git
+cd MazeMind
+open maze-mind-v2_9_16.html    # macOS; on Windows, double-click the file
+```
+
+Your saved agents and leaderboard times are stored in `localStorage`, so they stay in the browser you used.
+
+## Tech stack
+
+- Pure HTML, CSS, and vanilla JavaScript
+- No frameworks, no build step, no external libraries
+- Q-learning implemented from scratch in the browser
+- Progress (saved agents, leaderboard times) persisted with `localStorage`
+- Deployed to GitHub Pages by the workflow in [`.github/workflows/static.yml`](.github/workflows/static.yml)
+
+## Project structure
+
+```
+MazeMind/
+├── maze-mind-v2_9_16.html   # The entire app (HTML, CSS, JS, embedded images)
+├── index.html               # Redirects the site root to the app
+├── assets/
+│   ├── mouse-logo.png       # Mouse mark used in this README
+│   ├── logo.png             # Brain-and-lightbulb logo, original size
+│   ├── logo-transparent.png # Brain logo with a transparent background
+│   └── team/                # Team photos used on the About screen
+├── docs/screenshots/        # Screenshots used in this README
+├── .github/workflows/       # GitHub Pages deployment
+└── LICENSE
+```
+
+The app embeds its images as base64, so the HTML file does not depend on image hosting. The files in `assets/` are those same images, extracted for the README and other repo material.
+
+## Team
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/team/team-ally-rogin.jpg" width="120" alt="Ally Rogin"><br><b>Ally Rogin</b></td>
+    <td align="center"><img src="assets/team/team-lizzy-chu.jpg" width="120" alt="Lizzy Chu"><br><b>Lizzy Chu</b></td>
+    <td align="center"><img src="assets/team/team-sergey-dmitriev.jpg" width="120" alt="Sergey Dmitriev"><br><b>Sergey Dmitriev</b></td>
+    <td align="center"><img src="assets/team/team-bernardo-dias-martins.jpg" width="120" alt="Bernardo Dias Martins"><br><b>Bernardo Dias Martins</b></td>
+  </tr>
+</table>
+
+## Contributing
+
+Issues and pull requests are welcome. Because the app is a single HTML file, keep changes inside `maze-mind-v2_9_16.html` unless a change clearly needs a new file. Open the file in a browser and test your change in both modes before you submit.
+
+## Credits
+
+- Mouse mark: the 🐭 emoji from Google's Noto Color Emoji font, rendered to PNG.
+- Brain-and-lightbulb logo and team photos: from the About screen in the app.
+
+## License
+
+Released under the [MIT License](LICENSE).
