@@ -6,28 +6,39 @@
 
 **Teach your own AI.**
 
-[Play the live demo](https://serjdmitri.github.io/MazeMind/maze-mind-v2_9_16.html) · [Report a bug](https://github.com/serjdmitri/MazeMind/issues) · [Contribute](#contributing)
+An interactive maze where you build the puzzle, pick the reward, and watch a mouse learn to find the cheese by trial and error.
 
-[![Live demo](https://img.shields.io/badge/demo-live-f4c430?style=for-the-badge)](https://serjdmitri.github.io/MazeMind/maze-mind-v2_9_16.html)
-[![License: MIT](https://img.shields.io/badge/license-MIT-3f8f52?style=for-the-badge)](LICENSE)
-[![Pure HTML, CSS, JS](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JS-dda012?style=for-the-badge)](#tech-stack)
+[![Version](https://img.shields.io/badge/version-v2.9.16-f4c430?style=flat-square)](maze-mind-v2_9_16.html)
+[![Platform](https://img.shields.io/badge/platform-browser-dda012?style=flat-square)](#quick-start)
+[![Built with](https://img.shields.io/badge/built%20with-HTML%20%7C%20CSS%20%7C%20JS-3f8f52?style=flat-square)](#tech-stack)
+[![Backend](https://img.shields.io/badge/backend-none-3f8f52?style=flat-square)](#tech-stack)
+[![License: MIT](https://img.shields.io/badge/license-MIT-8c7845?style=flat-square)](LICENSE)
+
+[Play the live demo](https://serjdmitri.github.io/MazeMind/maze-mind-v2_9_16.html) · [Quick start](#quick-start) · [Features](#features) · [Contributing](#contributing)
+
+<br>
+
+<img src="docs/screenshots/train-ai.png" alt="Maze Mind training a Q-learning agent in the maze builder" width="90%">
+
+<sub><i>Build a maze, choose a reward scheme, and train the mouse.</i></sub>
 
 </div>
 
-Maze Mind is an interactive, single-file web app that teaches reinforcement learning through maze solving. Build a maze, choose how the agent gets rewarded, then watch a mouse learn through trial, error, and reward to find the cheese on its own.
+<br>
 
-There is no backend and no dependencies. The whole app is one HTML file that runs in the browser.
+Maze Mind turns reinforcement learning into something you can see. Design a maze, choose how the agent gets rewarded, then watch it learn through trial, error, and reward. Or flip the experience and solve the maze yourself, one bump at a time.
 
-<table>
-  <tr>
-    <td width="50%"><img src="docs/screenshots/home.png" alt="Maze Mind home screen"><br><sub><b>Home screen</b></sub></td>
-    <td width="50%"><img src="docs/screenshots/train-ai.png" alt="Train an AI mode with the maze builder"><br><sub><b>Train an AI</b>: build a maze and set the reward scheme</sub></td>
-  </tr>
-  <tr>
-    <td width="50%"><img src="docs/screenshots/become-the-ai.png" alt="Become the AI mode with the on-screen controls"><br><sub><b>Become the AI</b>: solve the maze yourself, one bump at a time</sub></td>
-    <td width="50%"></td>
-  </tr>
-</table>
+It is a single HTML file with no backend and no build step. Everything runs in your browser.
+
+<p align="center">
+  <img src="docs/screenshots/home.png" alt="Maze Mind home screen" width="45%">
+  &nbsp;
+  <img src="docs/screenshots/become-the-ai.png" alt="Become the AI mode" width="45%">
+</p>
+
+<p align="center"><sub>Left: home screen. Right: Become the AI mode, where you are the agent.</sub></p>
+
+> **Status:** Maze Mind is a single-file web app deployed with GitHub Pages. It has no installer and no accounts. Saved agents and leaderboard times live in your browser's `localStorage`, so they stay on the device you used.
 
 ## Features
 
