@@ -1,10 +1,12 @@
 <div align="center">
 
-<img src="assets/logo-transparent.png" alt="Maze Mind logo" width="180">
+<img src="assets/mouse-logo.png" alt="Maze Mind mouse logo" width="150">
 
 # Maze Mind
 
 **Teach your own AI.**
+
+[Play the live demo](https://serjdmitri.github.io/MazeMind/maze-mind-v2_9_16.html) · [Report a bug](https://github.com/serjdmitri/MazeMind/issues) · [Contribute](#contributing)
 
 [![Live demo](https://img.shields.io/badge/demo-live-f4c430?style=for-the-badge)](https://serjdmitri.github.io/MazeMind/maze-mind-v2_9_16.html)
 [![License: MIT](https://img.shields.io/badge/license-MIT-3f8f52?style=for-the-badge)](LICENSE)
@@ -16,7 +18,16 @@ Maze Mind is an interactive, single-file web app that teaches reinforcement lear
 
 There is no backend and no dependencies. The whole app is one HTML file that runs in the browser.
 
-![Train an AI mode](docs/screenshots/train-ai.png)
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/home.png" alt="Maze Mind home screen"><br><sub><b>Home screen</b></sub></td>
+    <td width="50%"><img src="docs/screenshots/train-ai.png" alt="Train an AI mode with the maze builder"><br><sub><b>Train an AI</b>: build a maze and set the reward scheme</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/become-the-ai.png" alt="Become the AI mode with the on-screen controls"><br><sub><b>Become the AI</b>: solve the maze yourself, one bump at a time</sub></td>
+    <td width="50%"></td>
+  </tr>
+</table>
 
 ## Features
 
@@ -71,8 +82,9 @@ MazeMind/
 ├── maze-mind-v2_9_16.html   # The entire app (HTML, CSS, JS, embedded images)
 ├── index.html               # Redirects the site root to the app
 ├── assets/
-│   ├── logo.png             # Logo, original size
-│   ├── logo-transparent.png # Logo with a transparent background, for dark surfaces
+│   ├── mouse-logo.png       # Mouse mark used in this README
+│   ├── logo.png             # Brain-and-lightbulb logo, original size
+│   ├── logo-transparent.png # Brain logo with a transparent background
 │   └── team/                # Team photos used on the About screen
 ├── docs/screenshots/        # Screenshots used in this README
 ├── .github/workflows/       # GitHub Pages deployment
@@ -91,6 +103,15 @@ The app embeds its images as base64, so the HTML file does not depend on image h
     <td align="center"><img src="assets/team/team-bernardo-dias-martins.jpg" width="120" alt="Bernardo Dias Martins"><br><b>Bernardo Dias Martins</b></td>
   </tr>
 </table>
+
+## Contributing
+
+Issues and pull requests are welcome. Because the app is a single HTML file, keep changes inside `maze-mind-v2_9_16.html` unless a change clearly needs a new file. Open the file in a browser and test your change in both modes before you submit.
+
+## Credits
+
+- Mouse mark: the 🐭 emoji from Google's Noto Color Emoji font, rendered to PNG.
+- Brain-and-lightbulb logo and team photos: from the About screen in the app.
 
 ## License
 
